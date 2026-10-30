@@ -1,0 +1,37 @@
+# Raw footage and large screen recordings
+pvp_raw.mp4
+reference_trailer.mp4
+roblox-glide-tower-gameplay-*.mp4
+*.zip
+
+# Intermediate build folders and scan caches
+climax_scans/
+clips/
+dir_scans/
+fight_scans/
+final_dc_frames/
+final_frames/
+fine_scans/
+glide_scans/
+montage_clips/
+preview_frames/
+pvp_check_frames/
+pvp_clips/
+pvp_previews/
+rea/
+ref_frames/
+scythe_scans/
+ult_scans/
+
+# Temporary audio and video exports
+*.wav
+Glide_Tower_Trailer_15s.mp4
+Roblox_PvP_Directors_Cut_30s.mp4
+Roblox_PvP_Fighting_Trailer_15s.mp4
+Roblox_PvP_Montage_Trailer_30s.mp4
+Roblox_PvP_Montage_Trailer_V2.mp4
+
+# Python cache
+__pycache__/
+*.py[cod]
+.venv/
