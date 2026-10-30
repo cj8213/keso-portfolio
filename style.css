@@ -368,41 +368,19 @@ body.apple-body {
   box-shadow: 0 24px 64px rgba(0, 113, 227, 0.12), 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* YouTube Link Overlay */
-.stage-link-wrap a.yt-play-link {
-  display: block;
+/* YouTube Embedded Frame */
+.youtube-frame {
   position: relative;
-  text-decoration: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
 }
 
-.yt-play-badge {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 9999px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.yt-play-badge svg {
-  width: 16px;
-  height: 16px;
-  fill: #ff0000;
-}
-
-.stage-link-wrap:hover .yt-play-badge {
-  transform: scale(1.05);
-  background: rgba(0, 0, 0, 0.95);
+.youtube-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 /* ==========================================================================
@@ -498,7 +476,7 @@ body.apple-body {
 }
 
 /* ==========================================================================
-   WORKFLOW SECTION (3 CLEAN CARDS)
+   WORKFLOW & AI HORIZON SECTION
    ========================================================================== */
 .workflow-apple-section {
   padding: 130px 24px;
@@ -509,7 +487,7 @@ body.apple-body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 0 auto 56px;
 }
 
 .apple-card {
@@ -545,6 +523,68 @@ body.apple-body {
   font-size: 1.05rem;
   color: var(--apple-body);
   line-height: 1.48;
+}
+
+/* AI Curiosity Box */
+.ai-curiosity-box {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid var(--apple-border);
+  border-radius: 28px;
+  padding: 48px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+}
+
+.curiosity-header {
+  max-width: 820px;
+  margin-bottom: 36px;
+}
+
+.curiosity-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--apple-headline);
+  margin-bottom: 14px;
+}
+
+.curiosity-desc {
+  font-size: 1.1rem;
+  color: var(--apple-body);
+  line-height: 1.5;
+}
+
+.curiosity-desc strong {
+  color: var(--apple-headline);
+}
+
+.curiosity-pills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.c-pill {
+  background: var(--apple-bg-alt);
+  border: 1px solid var(--apple-border);
+  border-radius: 18px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cp-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--apple-headline);
+}
+
+.cp-sub {
+  font-size: 0.88rem;
+  color: var(--apple-body);
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -667,6 +707,9 @@ body.apple-body {
   .workflow-apple-section,
   .closer-apple-section {
     padding: 80px 20px;
+  }
+  .ai-curiosity-box {
+    padding: 28px 20px;
   }
   .trailer-stats-grid {
     grid-template-columns: repeat(2, 1fr);
