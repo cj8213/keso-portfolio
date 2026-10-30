@@ -60,6 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
+  // 2.5 YOUTUBE CLICK-TO-PLAY PLAYER (AVOIDS LOCAL CONFIGURATION ERRORS)
+  // =========================================================================
+  const ytContainer = document.getElementById('ytPlayerContainer');
+
+  if (ytContainer) {
+    function loadYouTubePlayer() {
+      if (ytContainer.classList.contains('yt-active')) return;
+      const videoId = ytContainer.dataset.videoid || 'bOkgfXKpKh8';
+      ytContainer.classList.add('yt-active');
+      ytContainer.innerHTML = `
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1" 
+          title="Infinite Harvest Roblox Showcase" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      `;
+    }
+
+    ytContainer.addEventListener('click', (e) => {
+      // Don't intercept direct link clicks
+      if (e.target.closest('.yt-direct-pill')) return;
+      loadYouTubePlayer();
+    });
+  }
+
+  // =========================================================================
   // 3. COPY DISCORD HANDLE
   // =========================================================================
   const copyDiscordBtn = document.getElementById('copyDiscordBtn');
