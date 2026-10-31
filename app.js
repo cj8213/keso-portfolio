@@ -1,6 +1,6 @@
 /**
  * Keso (@obsurv) &mdash; Apple Minimalist Portfolio Engine
- * Tailored for Xolbor Studios Application
+ * AI Specialist Portfolio
  */
 
 document.addEventListener('DOMContentLoaded', () => {
